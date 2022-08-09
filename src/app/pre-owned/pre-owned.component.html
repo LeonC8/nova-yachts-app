@@ -1,0 +1,87 @@
+
+<div class="container-fluid" style = "padding-top: 25vh; height: 56.8vh" *ngIf="isLoading">
+	<div class="row" style="padding-left: 40vw">
+	  <app-loading-spinner></app-loading-spinner>
+	</div>
+  </div>
+  
+
+
+<div *ngIf= "!isLoading">
+<hr class = "p-0 m-0">
+
+<img class = "col-12 p-0" id = "img26" src = "https://res.cloudinary.com/dsgx9xiva/image/upload/v1659943075/nova-yachts/pre-owned/azimut68/azimut68-pc_ehkyku.jpg" style = "filter: brightness(70%);">
+<img class = "col-12 p-0" id = "img26-mobile" src = "https://res.cloudinary.com/dsgx9xiva/image/upload/v1659943069/nova-yachts/pre-owned/azimut68/azimut68-mobile_lbcgj4.jpg" style = "filter: brightness(70%);display:none">
+
+
+<div class = "container-fluid" style = "background-color: #f3f3f3;">
+	<div class = "row col-12 pt-4 pb-0 pt-md-4 pb-2 justify-content-center px-0 mx-0">
+		<h2 class = "col-12 text-center pb-0" id = "explorers-headline" style = "color:#263042; font-weight: bold;">Pre-owned yachts</h2>
+		<h5 class = "col-12 text-center pt-1" id = "explorers-text" style = "color:#263042">Large selection of pre-loved yachts ranging from 40 - 100 feet.</h5>
+		<hr  class = "col-9 col-md-5 pb-0 pt-0 mt-0"  style =  "border-color: #263042 !important">
+	</div>
+</div>
+	
+
+
+<div class="container-fluid pb-3 bg-light" id= "SaleAndCharter" style = "background-color: #f3f3f3 !important">
+	<div class="row justify-content-center pt-3">
+			
+		<div class="col-md-4 col-lg-3" *ngFor = "let yacht of yachts">
+			<div class="card shadow offerCard shadow-lg">
+				<img class= "card-img-top  cardImage" src="{{ yacht.mainLink }}" alt = "numarine 32 xp">
+				<div class= "card-body">
+					<h4 class="card-title ml-1 text-center" stlye = "font-size: 25px !important"> {{ yacht.name }} </h4>
+					<hr>
+					<p class= "card-text ml-1" style = "color: rgba(66, 66, 66, 0.911)"> 
+						
+						<fa-icon [icon]="faMoneyBill1" style = "margin-right: 4px;"></fa-icon>
+						{{ yacht.price }}
+
+						<br>
+
+						
+						<fa-icon [icon]="faClock" style = "margin-right: 7px;"></fa-icon>
+						 {{ yacht.year }}
+						 <br>
+
+						 <fa-icon [icon]="faCalendarCheck" style = "margin-right: 8px;"></fa-icon>
+						  {{ yacht.isImmediateDelivery === '1' ? 'Immediate delivery' : 'Delivery on request.'}}
+						<br>
+
+						<a href="#connect" class= "btn mt-3  btn-outline-primary">Contact us</a>
+						
+					</p>
+					
+				</div>
+			</div>		
+		</div>
+		
+	</div>
+	
+</div> 
+
+
+<div class="container-fluid pt-3  bg-light" id = "contactForm">
+	<div style="text-align:center">
+	  <h2>Contact us</h2>
+	  <p class = "mt-1 mb-1" style ="color:rgba(66, 66, 66, 0.911)">Leave us a message and we will get <br> back to you as soon as possible.</p>
+	</div>
+	<div class="row justify-content-center">
+	  
+	  <div class="column">
+		<form action="mail_handler.php" method = "post" name = "form">
+		  <input type="text" id="fname" name="name" placeholder="Your name..">
+		  
+		  <input type="text" id="e-mail" name="e-mail" placeholder="Your e-mail address..">
+
+		  <textarea id="subject" name="msg" placeholder="Write something.." style="height:170px"></textarea>
+		  <div class = "row justify-content-center">
+		  <input type="submit" name = "submit" value="Submit">
+		</div>
+		</form>
+	  </div>
+	</div>
+  </div>
+
+</div>

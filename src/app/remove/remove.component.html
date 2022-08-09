@@ -1,0 +1,27 @@
+
+<div class="container-fluid   bg-light" style="padding-top: 12vh">
+<div class="col-md-4 col-lg-3" *ngFor = "let yacht of yachts; let i = index">
+    <div class="card shadow offerCard shadow-lg">
+        <img class= "card-img-top  cardImage" src="{{ yacht.mainLink }}" alt = "numarine 32 xp">
+        <div class= "card-body">
+            <h4 class="card-title ml-1 text-center"> {{ yacht.name }} </h4>
+            <hr>
+            <p class= "card-text ml-1" style = "color: rgba(66, 66, 66, 0.911)"> 
+                 {{ yacht.price }}
+
+                <br>
+                 {{ yacht.year }}
+                 <br>
+                  {{ yacht.isImmediateDelivery === '1' ? 'Immediate delivery' : 'Delivery on request.'}}
+                <br>
+
+                <button class= "btn mt-3  btn-danger " (click)="onDelete(i)"> Delete</button>
+
+
+                
+            </p>
+            
+        </div>
+    </div>		
+</div>
+</div>

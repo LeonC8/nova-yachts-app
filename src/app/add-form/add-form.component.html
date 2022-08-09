@@ -1,0 +1,52 @@
+
+<div class="container-fluid" style = "padding-top: 25vh; height: 56.8vh" *ngIf="isLoading">
+  <div class="row" style="padding-left: 40vw">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+</div>
+
+<div class="container-fluid   bg-light" style="padding-top: 12vh" *ngIf="!isLoading">
+
+
+    <div style="text-align:center">
+        <h2>Add new yacht</h2>
+    </div>
+    <div class="row justify-content-center">
+    
+    <div class="column">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+        <!-- NAME -->
+        <label for="name" style="font-size: 14px">Name</label>
+        <input type="text" name="name" ngModel>
+        
+        <!-- PRICE -->
+        <label for="price" style="font-size: 14px">Price</label>
+        <input type="text" name="price" ngModel>
+        
+        <!-- YEAR -->
+        <label for="year" style="font-size: 14px">Year</label>
+        <input type="text" name="year" ngModel>
+
+        <!-- IMMEDIATE DELIVERY -->
+        <label for="isImmediateDelivery" style="font-size: 14px">Is Immediate Delivery</label>
+        <input type="text" name="isImmediateDelivery" ngModel>
+
+        <!--  TYPE -->
+        <label for="type" style="font-size: 14px">Type</label>
+        <input type="text" name="type" ngModel>
+
+        <!-- IMAGE -->
+        <label for="image" style="font-size: 14px">Image</label>
+        <input type="file" class = "m-4" (change)="handleFileInput($event)">
+        
+        <!-- SUBMIT BUTTON -->
+        <div class = "row justify-content-center">
+        <input type="submit" name = "submit" value="Submit">
+        </div>
+
+      </form>
+    </div>
+
+</div>
+</div>
