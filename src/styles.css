@@ -30,7 +30,7 @@ h2 {
 @media only screen and (min-width: 800px) {
 
   p {
-    font-size: 1.9rem !important;
+    font-size: 1.5rem !important;
   }
 
   h5 {
@@ -289,9 +289,12 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-  background: linear-gradient(to top, #153e70,#144381 );
+  background: linear-gradient(to top, #0f315c,#0f315c);
   color: white;
-  padding: 15px 20px;
+  padding: 15px 30px !important;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 10px !important;
   border: none;
   cursor: pointer;
   border-radius: 12px !important;
@@ -568,8 +571,7 @@ form {
 }
 
 .nav-link{
-  font-size: 1.1em !important;
-  
+  font-size: 0.95em !important;
   text-shadow: none !important;
 }
 
@@ -703,7 +705,7 @@ form {
 
 /*   background: linear-gradient(to top, #092649,#144381 ); */
 footer{
-  background: linear-gradient(to top, #092649,#144381 );
+  background: linear-gradient(to top, #0f315c,#0f315c);
 
 
   color: #d5d5d5;
